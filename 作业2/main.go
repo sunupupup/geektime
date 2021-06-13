@@ -16,7 +16,7 @@ func main() {
 	//外部利用stop对goroutine进行控制
 	var stop = make(chan struct{})
 
-	//程序结束了，得向done channel中发哦是那个
+	//程序结束了，得向done channel通知
 	go func() {
 		done <- StartHTTPServer(stop)
 	}()
