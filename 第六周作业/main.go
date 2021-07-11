@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-//暂不考虑并发
 //滑动窗口
 func test(r request) {
 	position := time.Now().Second() % windowSize
